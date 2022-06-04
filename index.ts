@@ -1,4 +1,4 @@
-import {PunishmentAction, PunishmentCategory} from "./src/models/Punishments";
+import {PunishmentAction, PunishmentCategory, Rank} from "./src/models/Punishments";
 import fetch from 'cross-fetch';
 
 const API_URL = "http://localhost:3000";
@@ -34,7 +34,8 @@ const modifyCategory = async (category: PunishmentCategory) => {
         level: 1,
         scale: PunishmentAction.MUTE,
         ordinal: 12,
-        displayMaterial: "WHITE_WOOL"
+        requiredRank: Rank.SR_MOD,
+        displayMaterial: "FEATHER"
     };
     await modifyCategory(category)
     await getCategories();
