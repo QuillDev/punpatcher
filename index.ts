@@ -1,17 +1,18 @@
-import got from 'got';
 import {PunishmentCategory} from "./src/models/Punishments";
+import fetch from 'cross-fetch';
 
-const API_URL = "localhost:3000";
+const API_URL = "http://localhost:3000";
 
-( async () => {
-    await getCategories();
-})();
 const getCategories = async (): Promise<PunishmentCategory[]> => {
-    const categories = [];
+    const categories: PunishmentCategory[] = [];
 
-    const data = await got.get(API_URL + "/v1/punishment-category").json();
+    const data = await fetch(API_URL + "/v1/punishment-category").then((res) => res.json())
 
     console.log(data);
 
     return categories;
 }
+
+( async () => {
+    await getCategories();
+})();
