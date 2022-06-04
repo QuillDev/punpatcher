@@ -58,6 +58,7 @@ const deleteCategory = async (identifier: string) => {
             name: "Suicide/Harm Encouragement or Death Wishes",
             message: "Death wishes or encouraging self harm to others is not permitted.",
             level: 11,
+            deprecated: true,
             scale: PunishmentAction.BAN
         }
     ]
