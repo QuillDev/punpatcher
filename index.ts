@@ -33,11 +33,7 @@ const deleteCategory = async (identifier: string) => {
 }
 
 ( async () => {
-    const category: PunishmentCategoryPatch = {
-        name: "test_thing",
-        short: "diditchange?"
-    };
-    // await modifyCategory(category)
+    await modifyCategory({short: "test", deprecated: true})
     await getCategories();
 
     console.log("operations complete.")
