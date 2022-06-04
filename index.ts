@@ -34,31 +34,35 @@ const deleteCategory = async (identifier: string) => {
 }
 
 ( async () => {
-    //modify discrimination pun
-    await modifyCategory({
-        short: "Discrimination",
-        name: "Racial Slurs",
-        message: "Using slurs and/or discriminating others is not allowed.",
-        level: 8,
-        scale: PunishmentAction.BAN
-    })
-    //modify harassment pun
-    await modifyCategory({
-        short: "Harassment",
-        name: "Harassment",
-        message: "Harassing other players and staff is not permitted.",
-        level: 8,
-        scale: PunishmentAction.BAN
-    })
-    //modify suicide/self harm
-    await modifyCategory({
-        short: "Encouraging_Harm",
-        name: "Suicide/Harm Encouragement or Death Wishes",
-        message: "Death wishes or encouraging self harm to others is not permitted.",
-        level: 11,
-        scale: PunishmentAction.BAN
-    })
 
+    const patches: PunishmentCategoryPatch[] = [
+        //discrimination update
+        {
+            short: "Discrimination",
+            name: "Racial Slurs",
+            message: "Using slurs and/or discriminating others is not allowed.",
+            level: 8,
+            scale: PunishmentAction.BAN
+        },
+        // harassment update
+        {
+            short: "Harassment",
+            name: "Harassment",
+            message: "Harassing other players and staff is not permitted.",
+            level: 8,
+            scale: PunishmentAction.BAN
+        },
+        //self harm update
+        {
+            short: "Encouraging_Harm",
+            name: "Suicide/Harm Encouragement or Death Wishes",
+            message: "Death wishes or encouraging self harm to others is not permitted.",
+            level: 11,
+            scale: PunishmentAction.BAN
+        }
+    ]
+
+    await Promise.allSettled(patches.map((patch) => modifyCategory(patch)));
     await getCategories();
 
     console.log("operations complete.")
