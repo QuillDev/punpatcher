@@ -37,7 +37,7 @@ const deleteCategory = async (identifier: string) => {
         name: "test_thing",
         short: "diditchange?"
     };
-    await modifyCategory(category)
+    // await modifyCategory(category)
     await getCategories();
 
     console.log("operations complete.")
