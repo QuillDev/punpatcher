@@ -62,7 +62,10 @@ const deleteCategory = async (identifier: string) => {
         }
     ]
 
-    await Promise.allSettled(patches.map((patch) => modifyCategory(patch)));
+    for (const patch of patches) {
+        await modifyCategory(patch);
+    }
+
     await getCategories();
 
     console.log("operations complete.")
