@@ -14,15 +14,16 @@ const getCategories = async (): Promise<PunishmentCategory[]> => {
 }
 
 const modifyCategory = async (category: PunishmentCategoryPatch) => {
-    await fetch(API_URL + "/v1/punishment-category/" + category.name, {
+    const response = await fetch(API_URL + "/v1/punishment-category/" + category.name, {
         method: "PATCH",
         body: JSON.stringify(category),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         }
-    }).catch(console.error)
+    }).then((res) => res.json())
+        .catch(console.error)
 
-    console.log(`Attempted to patch ${category.short}`)
+    console.log(response)
 }
 
 const deleteCategory = async (identifier: string) => {
@@ -66,8 +67,4 @@ const deleteCategory = async (identifier: string) => {
     for (const patch of patches) {
         await modifyCategory(patch);
     }
-
-    await getCategories();
-
-    console.log("operations complete.")
 })();
