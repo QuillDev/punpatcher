@@ -14,7 +14,7 @@ const getCategories = async (): Promise<PunishmentCategory[]> => {
 }
 
 const modifyCategory = async (category: PunishmentCategoryPatch) => {
-    const response = await fetch(API_URL + "/v1/punishment-category/" + category.name, {
+    const response = await fetch(API_URL + "/v1/punishment-category/" + category.short, {
         method: "PATCH",
         body: JSON.stringify(category),
         headers: {
