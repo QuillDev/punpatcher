@@ -33,7 +33,7 @@ const deleteCategory = async (identifier: string) => {
 }
 
 ( async () => {
-    await modifyCategory({short: "test", deprecated: true})
+    await modifyCategory({short: "test", deprecated: false})
     await getCategories();
 
     console.log("operations complete.")
