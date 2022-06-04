@@ -7,6 +7,8 @@ const getCategories = async (): Promise<PunishmentCategory[]> => {
     const categories: PunishmentCategory[] = [];
 
     const data = await fetch(API_URL + "/v1/punishment-category").then((res) => res.json())
+
+    console.log(data);
     return categories;
 }
 
@@ -35,6 +37,8 @@ const deleteCategory = async (identifier: string) => {
         name: "test_thing",
         short: "diditchange?"
     };
-    // await modifyCategory(category)
+    await modifyCategory(category)
     await getCategories();
+
+    console.log("operations complete.")
 })();
