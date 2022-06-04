@@ -1,4 +1,4 @@
-import {PunishmentAction, PunishmentCategory, Rank} from "./src/models/Punishments";
+import {PunishmentAction, PunishmentCategory, PunishmentCategoryPatch, Rank} from "./src/models/Punishments";
 import fetch from 'cross-fetch';
 
 const API_URL = "http://localhost:3000";
@@ -7,13 +7,10 @@ const getCategories = async (): Promise<PunishmentCategory[]> => {
     const categories: PunishmentCategory[] = [];
 
     const data = await fetch(API_URL + "/v1/punishment-category").then((res) => res.json())
-
-    console.log(data);
-
     return categories;
 }
 
-const modifyCategory = async (category: PunishmentCategory) => {
+const modifyCategory = async (category: PunishmentCategoryPatch) => {
     await fetch(API_URL + "/v1/punishment-category/" + category.name, {
         method: "PATCH",
         body: JSON.stringify(category),
@@ -25,17 +22,18 @@ const modifyCategory = async (category: PunishmentCategory) => {
     console.log(`Attempted to patch ${category.short}`)
 }
 
+const deleteCategory = async (identifier: string) => {
+    await fetch(API_URL+"/v1/punishment-category/" + identifier, {
+        method: "DELETE"
+    })
+
+    console.log(`Attempting to delete ${identifier}`)
+}
+
 ( async () => {
-    const category: PunishmentCategory = {
-        short: "test",
+    const category: PunishmentCategoryPatch = {
         name: "test_thing",
-        deprecated: false,
-        message: "some message",
-        level: 1,
-        scale: PunishmentAction.MUTE,
-        ordinal: 12,
-        requiredRank: Rank.SR_MOD,
-        displayMaterial: "FEATHER"
+        short: "diditchange?"
     };
     await modifyCategory(category)
     await getCategories();

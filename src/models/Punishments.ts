@@ -10,6 +10,18 @@ export type PunishmentCategory = {
     displayMaterial: string
 }
 
+export type PunishmentCategoryPatch = {
+    short?: string;
+    name: string;
+    deprecated?: boolean;
+    message?: string;
+    level?: number;
+    scale?: Exclude<PunishmentAction, "KICK" | "WARN">;
+    requiredRank?: Rank;
+    ordinal?: number;
+    displayMaterial?: string
+}
+
 export enum Rank {
     ADMIN = "ADMIN",
     SR_MOD = "SR_MOD",
