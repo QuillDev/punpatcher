@@ -61,7 +61,12 @@ const deleteCategory = async (identifier: string) => {
             level: 11,
             deprecated: true,
             scale: PunishmentAction.BAN
+        },
+        {
+            short: "test",
+            deprecated: true
         }
+
     ]
 
     for (const patch of patches) {
