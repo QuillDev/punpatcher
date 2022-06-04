@@ -11,8 +11,8 @@ export type PunishmentCategory = {
 }
 
 export type PunishmentCategoryPatch = {
-    short?: string;
-    name: string;
+    short: string;
+    name?: string;
     deprecated?: boolean;
     message?: string;
     level?: number;
