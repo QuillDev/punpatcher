@@ -51,18 +51,18 @@ const deleteCategory = async (identifier: string) => {
 
 ( async () => {
     const names: string[] = (await getCategories()).map((it) => it.short);
-
+    console.log(names);
     // load the patches from the file
-    const patches: PunishmentCategoryPatch[] = loadFromFile();
-
-    // try to load all patches from the file
-    for(const patch of patches){
-        // if we have not created this punishment, create it
-        if(!names.includes(patch.short)){
-            await createCategory(patchToCategory(patch)).then(console.info);
-            continue;
-        }
-
-        await modifyCategory(patch).then(console.info)
-    }
+    // const patches: PunishmentCategoryPatch[] = loadFromFile();
+    //
+    // // try to load all patches from the file
+    // for(const patch of patches){
+    //     // if we have not created this punishment, create it
+    //     if(!names.includes(patch.short)){
+    //         await createCategory(patchToCategory(patch)).then(console.info);
+    //         continue;
+    //     }
+    //
+    //     await modifyCategory(patch).then(console.info)
+    // }
 })();
