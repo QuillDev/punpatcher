@@ -38,6 +38,14 @@ const createCategory = async (category: PunishmentCategory) => {
     }).then((res) => res.json()).catch(console.error);
 }
 
+const deprecateCategory = async (identifier: string) => {
+    await fetch(API_URL+"/v1/punishment-category/deprecate/" + identifier, {
+        method: "DELETE"
+    }).catch(console.error)
+
+    console.log(`Attempting to delete ${identifier}`)
+}
+
 const deleteCategory = async (identifier: string) => {
     await fetch(API_URL+"/v1/punishment-category/" + identifier, {
         method: "DELETE"
@@ -46,10 +54,22 @@ const deleteCategory = async (identifier: string) => {
     console.log(`Attempting to delete ${identifier}`)
 }
 
+const wipePunishments = async () => {
+    const cats = await getCategories();
+
+    for(const cat of cats){
+        // @ts-ignore
+        await deleteCategory(cat["_id"] as string);
+    }
+}
+
 ( async () => {
-    const name= (await getCategories()).map((it) => it.name);
-    console.log(name);
-    // // load the patches from the file
+    const cats = (await getCategories());
+    const names = cats.map((it) => it.short);
+
+    await wipePunishments();
+
+    // load the patches from the file
     // const patches: PunishmentCategoryPatch[] = loadFromFile();
     //
     // // try to load all patches from the file
