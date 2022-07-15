@@ -50,7 +50,7 @@ const deleteCategory = async (identifier: string) => {
 }
 
 ( async () => {
-    const names: string[] = (await getCategories()).map((it) => it.short);
+    const names= await getCategories();
     console.log(names);
     // load the patches from the file
     // const patches: PunishmentCategoryPatch[] = loadFromFile();
