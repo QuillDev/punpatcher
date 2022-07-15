@@ -67,19 +67,19 @@ const wipePunishments = async () => {
     const cats = (await getCategories());
     const names = cats.map((it) => it.short);
 
-    await wipePunishments();
+    // await wipePunishments();
 
     // load the patches from the file
-    // const patches: PunishmentCategoryPatch[] = loadFromFile();
-    //
-    // // try to load all patches from the file
-    // for(const patch of patches){
-    //     // if we have not created this punishment, create it
-    //     if(!names.includes(patch.short)){
-    //         await createCategory(patchToCategory(patch)).then(console.info);
-    //         continue;
-    //     }
-    //
-    //     await modifyCategory(patch).then(console.info)
-    // }
+    const patches: PunishmentCategoryPatch[] = loadFromFile();
+
+    // try to load all patches from the file
+    for(const patch of patches){
+        // if we have not created this punishment, create it
+        if(!names.includes(patch.short)){
+            await createCategory(patchToCategory(patch)).then(console.info);
+            continue;
+        }
+
+        await modifyCategory(patch).then(console.info)
+    }
 })();
