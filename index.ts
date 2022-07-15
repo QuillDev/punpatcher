@@ -67,7 +67,7 @@ const wipePunishments = async () => {
     const cats = (await getCategories());
     const names = cats.map((it) => it.short);
 
-    await wipePunishments();
+    // await wipePunishments();
 
     // load the patches from the file
     const patches: PunishmentCategoryPatch[] = loadFromFile();
