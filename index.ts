@@ -11,11 +11,8 @@ const loadFromFile = (): PunishmentCategoryPatch[] => {
 }
 
 const getCategories = async (): Promise<PunishmentCategory[]> => {
-    const categories: PunishmentCategory[] = [];
-
-    const data = await fetch(API_URL + "/v1/punishment-category").then((res) => res.json())
+    return await fetch(API_URL + "/v1/punishment-category").then((res) => res.json())
         .catch(console.error)
-    return categories;
 }
 
 const modifyCategory = async (category: PunishmentCategoryPatch) => {
