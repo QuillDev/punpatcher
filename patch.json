@@ -435,7 +435,7 @@
   },
   {
     "deprecated": false,
-    "displayMaterial": "CANDLE_CAKE",
+    "displayMaterial": "CAKE",
     "_id": "",
     "name": "Ad Rewards",
     "message": "Rewarding users for advertising a server is not allowed. ",
@@ -446,7 +446,7 @@
   },
   {
     "deprecated": false,
-    "displayMaterial": "CREEPER_WALL_HEAD",
+    "displayMaterial": "CREEPER_HEAD",
     "_id": "",
     "name": "Explicit Content",
     "message": "Explicit Content is not allowed in our lobby or on servers. ",
