@@ -41,13 +41,13 @@ export enum PunishmentAction {
 export const patchToCategory = (patch: PunishmentCategoryPatch): PunishmentCategory => {
     return {
         short: patch.short,
-        name: patch.name ?? patch.short,
-        deprecated: patch.deprecated ?? false,
-        message: patch.message ?? "Requires Message",
-        level: patch.level ?? 0,
-        scale: patch.scale ?? PunishmentAction.MUTE,
+        name: patch.name || patch.short,
+        deprecated: patch.deprecated || false,
+        message: patch.message || "Requires Message",
+        level: patch.level || 0,
+        scale: patch.scale || PunishmentAction.MUTE,
         requiredRank: patch.requiredRank,
-        ordinal: patch.ordinal ?? 1,
-        displayMaterial: patch.displayMaterial ?? "FEATHER",
+        ordinal: patch.ordinal || 1,
+        displayMaterial: patch.displayMaterial || "FEATHER",
     }
 }
