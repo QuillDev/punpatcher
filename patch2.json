@@ -2,40 +2,44 @@
   {
     "deprecated": false,
     "displayMaterial": "FIRE_CHARGE",
-    "_id": "602bc341361d05001c264b56",
     "name": "Suicide/Harm Encouragement or Death Wishes",
     "message": "Death wishes or encouraging self harm to others is not permitted.",
     "short": "Encouraging_Harm",
     "level": 11,
     "scale": "BAN",
     "ordinal": 13,
-    "__v": 0,
     "requiredRank": "SR_MOD"
   },
   {
     "deprecated": false,
     "displayMaterial": "IRON_SWORD",
-    "_id": "602bc341361d05001c264b4d",
     "name": "Harassment",
     "message": "Harassing other players and staff is not permitted.",
     "short": "Harassment",
     "level": 9,
     "scale": "BAN",
     "ordinal": 10,
-    "__v": 0,
     "requiredRank": "SR_MOD"
   },
   {
     "deprecated": false,
     "displayMaterial": "FLINT_AND_STEEL",
-    "_id": "602bc341361d05001c264b55",
     "name": "Discrimination",
     "message": "Using slurs and/or discriminating others is not allowed in our lobby or servers.",
     "short": "Discrimination",
     "level": 10,
     "scale": "BAN",
     "ordinal": 6,
-    "__v": 0,
     "requiredRank": "SR_MOD"
+  },
+  {
+    "deprecated": false,
+    "displayMaterial": "BLAST_FURNACE",
+    "name": "Severe Slurs",
+    "message": "Using slurs and/or discriminating others is not allowed in our lobby or servers.",
+    "short": "slurs2",
+    "level": 11,
+    "scale": "BAN",
+    "ordinal": 49
   }
 ]
