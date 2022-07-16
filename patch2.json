@@ -41,5 +41,9 @@
     "level": 11,
     "scale": "BAN",
     "ordinal": 49
+  },
+  {
+    "message": "Remember to be respectful to others!",
+    "short": "Disrespect"
   }
 ]
