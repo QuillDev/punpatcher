@@ -27,14 +27,14 @@
   },
   {
     "deprecated": false,
-    "displayMaterial": "IRON_SWORD",
-    "_id": "602bc341361d05001c264b4d",
-    "name": "Harassment",
-    "message": "Harassing other players and staff is not permitted.",
-    "short": "Harassment",
-    "level": 9,
+    "displayMaterial": "FLINT_AND_STEEL",
+    "_id": "602bc341361d05001c264b55",
+    "name": "Racial Slurs",
+    "message": "Using slurs and/or discriminating others is not allowed in our lobby or servers.",
+    "short": "Discrimination",
+    "level": 10,
     "scale": "BAN",
-    "ordinal": 10,
+    "ordinal": 6,
     "__v": 0,
     "requiredRank": "SR_MOD"
   }
