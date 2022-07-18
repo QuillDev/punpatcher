@@ -69,6 +69,7 @@ const wipePunishments = async () => {
 
     // load the patches from the file
     const patches: PunishmentCategoryPatch[] = loadFromFile('patch2.json');
+    console.log(patches);
 
     // try to load all patches from the file
     for(const patch of patches){

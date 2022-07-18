@@ -277,7 +277,6 @@
   {
     "deprecated": false,
     "displayMaterial": "TRIPWIRE_HOOK",
-    "_id": "602bc341361d05001c264b5c",
     "name": "Community Disruption",
     "message": "Griefing player servers or causing disruptions in the community is not permitted.",
     "short": "Disruption",
@@ -289,7 +288,6 @@
   {
     "deprecated": false,
     "displayMaterial": "DIAMOND_SWORD",
-    "_id": "602bc341361d05001c264b4e",
     "name": "Inappropriate Behavior",
     "message": "Inappropriate topics/words are not permitted in chat.",
     "short": "Inappropriate",
@@ -301,7 +299,6 @@
   {
     "deprecated": false,
     "displayMaterial": "FLINT_AND_STEEL",
-    "_id": "602bc341361d05001c264b55",
     "name": "Racial Slurs",
     "message": "Using slurs and/or discriminating others is not allowed in our lobby or servers.",
     "short": "Discrimination",
