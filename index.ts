@@ -68,14 +68,14 @@ const wipePunishments = async () => {
     const names = cats.map((it) => it.short);
 
     // load the patches from the file
-    const patches: PunishmentCategoryPatch[] = loadFromFile('patch2.json');
+    const patches: PunishmentCategoryPatch[] = loadFromFile('patch3.json');
 
 
     const promises: Promise<void>[] = [];
     // try to load all patches from the file
     for(const patch of patches){
         console.info(`Attempting to patch ${patch.short}`);
-        const promise = modifyCategory(patch);
+        const promise = createCategory(patchToCategory(patch));
         promise.then(console.info)
         promise.catch(console.error);
         promises.push(promise);
