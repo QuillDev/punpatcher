@@ -68,7 +68,7 @@ const wipePunishments = async () => {
     const names = cats.map((it) => it.short);
 
     // load the patches from the file
-    const patches: PunishmentCategoryPatch[] = loadFromFile('patch3.json');
+    const patches: PunishmentCategoryPatch[] = loadFromFile('patch4.json');
 
 
     const promises: Promise<void>[] = [];

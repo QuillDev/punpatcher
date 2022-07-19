@@ -1,0 +1,14 @@
+[
+  {
+    "short": "Encouraging_Harm",
+    "requiredRank": "MOD"
+  },
+  {
+    "short": "Harassment",
+    "requiredRank": "MOD"
+  },
+  {
+    "short": "Discrimination",
+    "requiredRank": "MOD"
+  }
+]
