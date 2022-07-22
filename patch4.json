@@ -1,14 +1,35 @@
 [
   {
+    "deprecated": false,
+    "displayMaterial": "FIRE_CHARGE",
+    "name": "Suicide/Harm Encouragement or Death Wishes",
+    "message": "Death wishes or encouraging self harm to others is not permitted.",
     "short": "Encouraging_Harm",
-    "requiredRank": null
+    "level": 11,
+    "scale": "BAN",
+    "ordinal": 13,
+    "requiredRank": "MOD"
   },
   {
+    "deprecated": false,
+    "displayMaterial": "IRON_SWORD",
+    "name": "Harassment",
+    "message": "Harassing other players and staff is not permitted.",
     "short": "Harassment",
-    "requiredRank": null
+    "level": 9,
+    "scale": "BAN",
+    "ordinal": 10,
+    "requiredRank": "MOD"
   },
   {
+    "deprecated": false,
+    "displayMaterial": "FLINT_AND_STEEL",
+    "name": "Discrimination",
+    "message": "Using slurs and/or discriminating others is not allowed in our lobby or servers.",
     "short": "Discrimination",
-    "requiredRank": null
+    "level": 10,
+    "scale": "BAN",
+    "ordinal": 6,
+    "requiredRank": "MOD"
   }
 ]
