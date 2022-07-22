@@ -75,7 +75,7 @@ const wipePunishments = async () => {
     // try to load all patches from the file
     for(const patch of patches){
         console.info(`Attempting to patch ${patch.short}`);
-        const promise = createCategory(patchToCategory(patch));
+        const promise = modifyCategory(patchToCategory(patch));
         promise.then(console.info)
         promise.catch(console.error);
         promises.push(promise);
