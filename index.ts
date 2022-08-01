@@ -65,7 +65,7 @@ const wipePunishments = async () => {
 }
 
 ( async () => {
-     let res = await fetch(API_URL + "/v1/ip/QuillDev?depth=1")
+     let res = await fetch(API_URL + "/v1/ip/alts/QuillDev?depth=1")
         .catch(console.error)
     console.info(res);
 })();
