@@ -2,6 +2,7 @@ import {patchToCategory, PunishmentAction, PunishmentCategory, PunishmentCategor
 import fetch from 'cross-fetch';
 import {readFileSync} from "fs";
 import * as console from "console";
+import {join} from 'path';
 
 const API_URL = "http://localhost:3000";
 
@@ -64,22 +65,7 @@ const wipePunishments = async () => {
 }
 
 ( async () => {
-    const cats = (await getCategories());
-    const names = cats.map((it) => it.short);
-
-    // load the patches from the file
-    const patches: PunishmentCategoryPatch[] = loadFromFile('patch4.json');
-
-
-    const promises: Promise<void>[] = [];
-    // try to load all patches from the file
-    for(const patch of patches){
-        console.info(`Attempting to patch ${patch.short}`);
-        const promise = modifyCategory(patchToCategory(patch));
-        promise.then(console.info)
-        promise.catch(console.error);
-        promises.push(promise);
-    }
-
-    await Promise.all(promises);
+     let res = await fetch(API_URL + "/v1/ip/QuillDev?depth=1").then((res) => res.json())
+        .catch(console.error)
+    console.info(res);
 })();
