@@ -1,4 +1,4 @@
-import {patchToCategory, PunishmentAction, PunishmentCategory, PunishmentCategoryPatch} from "./src/models/Punishments";
+import {PunishmentCategory, PunishmentCategoryPatch} from "./src/models/Punishments";
 import fetch from 'cross-fetch';
 import {readFileSync} from "fs";
 import * as console from "console";
@@ -65,7 +65,7 @@ const wipePunishments = async () => {
 }
 
 ( async () => {
-     let res = await fetch(API_URL + "/v1/ip/alts/QuillDev?depth=1")
+     let res = await fetch(API_URL + "/v1/ip/alts/QuillDev?depth=1").then(res => res.json())
         .catch(console.error)
     console.info(res);
 })();
