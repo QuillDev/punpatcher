@@ -1,12 +1,12 @@
 import {PunishmentCategory, PunishmentCategoryPatch} from "./src/models/Punishments";
 import fetch from 'cross-fetch';
 import * as console from "console";
-import {readFile} from "fs/promises";
+import {readFileSync} from "fs";
 
 const API_URL = "http://localhost:3000";
 
 const loadFromFile = async (fileName: string): Promise<PunishmentCategoryPatch[]> => {
-    return JSON.parse(await readFile(fileName, 'utf-8'));
+    return JSON.parse(readFileSync(fileName, 'utf-8'));
 }
 
 const getCategories = async (): Promise<PunishmentCategory[]> => {
@@ -47,4 +47,8 @@ const deprecateCategory = async (identifier: string) => {
 }
 
 (async () => {
+    const puns = await loadFromFile("./patches/update.json");
+    for(const pun of puns) {
+        await modifyCategory(pun);
+    }
 })();
