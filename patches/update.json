@@ -1,0 +1,167 @@
+[
+  {
+    "short": "Disrespect",
+    "deprecated": true
+  },
+  {
+    "short": "Discrimination",
+    "deprecated": true
+  },
+  {
+    "short": "Cape",
+    "deprecated": true
+  },
+  {
+    "short": "Media_Ad",
+    "deprecated": true
+  },
+  {
+    "short": "Hacks",
+    "deprecated": true
+  },
+  {
+    "short": "Encouraging_Harm",
+    "deprecated": true
+  },
+  {
+    "short": "Bad_Behavior",
+    "deprecated": true
+  },
+  {
+    "short": "Int_Ad",
+    "deprecated": true
+  },
+  {
+    "short": "Links",
+    "deprecated": true
+  },
+  {
+    "short": "Instigating",
+    "deprecated": true
+  },
+  {
+    "short": "Comp_Ad",
+    "deprecated": true
+  },
+  {
+    "short": "Personal_Info",
+    "deprecated": true
+  },
+  {
+    "short": "Disruption",
+    "deprecated": true
+  },
+  {
+    "short": "auto_ad",
+    "deprecated": true
+  },
+  {
+    "short": "NFA",
+    "deprecated": true
+  },
+  {
+    "short": "chat_bot",
+    "deprecated": true
+  },
+  {
+    "short": "event",
+    "deprecated": true
+  },
+  {
+    "short": "nameban",
+    "deprecated": true
+  },
+  {
+    "short": "sell",
+    "deprecated": true
+  },
+  {
+    "short": "slurs2",
+    "deprecated": true
+  },
+  {
+    "short": "adreward",
+    "deprecated": true
+  },
+  {
+    "short": "explicit",
+    "deprecated": true
+  },
+  {
+    "short": "Encouraging_Harm",
+    "name": "Self-Harm Encouragement",
+    "level": 12
+  },
+  {
+    "short": "Swearing",
+    "name": "Swearing/Discrimination",
+    "level": 11
+  },
+  {
+    "short": "Server_Ad",
+    "level": 8
+  },
+  {
+    "short": "Spam",
+    "level": 8
+  },
+  {
+    "short": "Inappropriate",
+    "level": 11
+  },
+  {
+    "short": "Threats",
+    "level": -1
+  },
+  {
+    "short": "Mute_Evasion",
+    "level": 12
+  },
+  {
+    "short": "Ban_Evasion",
+    "level": -1
+  },
+  {
+    "short": "staff_imper",
+    "level": 12
+  },
+  {
+    "short": "under13",
+    "level": -1
+  },
+  {
+    "short": "abuse_supp",
+    "name": "Abusing Staff",
+    "level": 11
+  },
+  {
+    "short": "Predatory",
+    "name": "Explicit or Predatory Content",
+    "level": -1
+  },
+  {
+    "short": "Fraud",
+    "name": "Fraud Charges",
+    "level": -1
+  },
+  {
+    "short": "backdoor",
+    "name": "Griefing Player Server",
+    "level": 12
+  },
+  {
+    "short": "Skin",
+    "name": "Inappropriate Name or Skin",
+    "level": -1
+  },
+  {
+    "short": "other",
+    "name": "Other - 3 months",
+    "level": 11
+  },
+  {
+    "short": "Bot",
+    "name": "Permanent Ban - Other",
+    "level": -1
+  }
+]

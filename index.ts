@@ -1,14 +1,12 @@
 import {PunishmentCategory, PunishmentCategoryPatch} from "./src/models/Punishments";
 import fetch from 'cross-fetch';
-import {readFileSync} from "fs";
 import * as console from "console";
-import {join} from 'path';
+import {readFile} from "fs/promises";
 
 const API_URL = "http://localhost:3000";
 
-const loadFromFile = (fileName: string): PunishmentCategoryPatch[] => {
-    const puns: PunishmentCategoryPatch[] = JSON.parse(readFileSync(fileName, 'utf-8'));
-    return puns;
+const loadFromFile = async (fileName: string): Promise<PunishmentCategoryPatch[]> => {
+    return JSON.parse(await readFile(fileName, 'utf-8'));
 }
 
 const getCategories = async (): Promise<PunishmentCategory[]> => {
@@ -40,32 +38,13 @@ const createCategory = async (category: PunishmentCategory) => {
 }
 
 const deprecateCategory = async (identifier: string) => {
-    await fetch(API_URL+"/v1/punishment-category/deprecate/" + identifier, {
-        method: "DELETE"
-    }).catch(console.error)
-
-    console.log(`Attempting to delete ${identifier}`)
-}
-
-const deleteCategory = async (identifier: string) => {
-    await fetch(API_URL+"/v1/punishment-category/" + identifier, {
-        method: "DELETE"
-    }).catch(console.error)
-
-    console.log(`Attempting to delete ${identifier}`)
-}
-
-const wipePunishments = async () => {
-    const cats = await getCategories();
-
-    for(const cat of cats){
-        // @ts-ignore
-        await deleteCategory(cat["_id"] as string);
+    const update: PunishmentCategoryPatch = {
+        short: identifier,
+        deprecated: true
     }
+
+    return await modifyCategory(update);
 }
 
-( async () => {
-     let res = await fetch(API_URL + "/v1/ip/alts/QuillDev?depth=1").then(res => res.json())
-        .catch(console.error)
-    console.info(res);
+(async () => {
 })();
