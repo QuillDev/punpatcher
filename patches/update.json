@@ -162,6 +162,7 @@
   {
     "short": "Bot",
     "name": "Permanent Ban - Other",
-    "level": -1
+    "level": -1,
+    "ordinal": 100
   }
 ]
