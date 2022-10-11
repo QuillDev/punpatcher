@@ -15,16 +15,13 @@ const getCategories = async (): Promise<PunishmentCategory[]> => {
 }
 
 const modifyCategory = async (category: PunishmentCategoryPatch) => {
-    const response = await fetch(API_URL + "/v1/punishment-category/" + category.short, {
+    return await fetch(API_URL + "/v1/punishment-category/" + category.short, {
         method: "PATCH",
         body: JSON.stringify(category),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         }
-    }).then((res) => res.json())
-        .catch(console.error)
-
-    console.log(response)
+    }).then((res) => res.json()).catch(console.error)
 }
 
 const createCategory = async (category: PunishmentCategory) => {
@@ -48,7 +45,8 @@ const deprecateCategory = async (identifier: string) => {
 
 (async () => {
     const puns = await loadFromFile("./patches/update.json");
-    for(const pun of puns) {
-        await modifyCategory(pun);
+    for (const pun of puns) {
+        let response = await modifyCategory(pun);
+        console.info(JSON.stringify(response, null, 2));
     }
 })();
