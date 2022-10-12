@@ -95,6 +95,7 @@
   {
     "short": "Swearing",
     "name": "Swearing/Discrimination",
+    "description": "Swearing/Discrimination is against our rules, so is trying to bypass our chat filter.",
     "level": 11
   },
   {
@@ -152,6 +153,7 @@
   {
     "short": "Skin",
     "name": "Inappropriate Name or Skin",
+    "description": "Inappropriate or discriminatory Minecraft skins/usernames are not allowed. Please change your skin/username and contact Support.",
     "level": -1
   },
   {
