@@ -96,7 +96,8 @@
     "short": "Swearing",
     "name": "Swearing/Discrimination",
     "message": "Swearing/Discrimination is against our rules, so is trying to bypass our chat filter.",
-    "level": 11
+    "level": 11,
+    "scale": "BAN"
   },
   {
     "short": "Server_Ad",
