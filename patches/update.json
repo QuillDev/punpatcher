@@ -113,7 +113,7 @@
   },
   {
     "short": "Threats",
-    "level": -1
+    "level": 13
   },
   {
     "short": "Mute_Evasion",
@@ -121,7 +121,7 @@
   },
   {
     "short": "Ban_Evasion",
-    "level": -1
+    "level": 13
   },
   {
     "short": "staff_imper",
@@ -129,7 +129,7 @@
   },
   {
     "short": "under13",
-    "level": -1
+    "level": 13
   },
   {
     "short": "abuse_supp",
@@ -139,12 +139,12 @@
   {
     "short": "Predatory",
     "name": "Explicit or Predatory Content",
-    "level": -1
+    "level": 13
   },
   {
     "short": "Fraud",
     "name": "Fraud Charges",
-    "level": -1
+    "level": 13
   },
   {
     "short": "backdoor",
@@ -155,7 +155,7 @@
     "short": "Skin",
     "name": "Inappropriate Name or Skin",
     "message": "Inappropriate or discriminatory Minecraft skins/usernames are not allowed. Please change your skin/username and contact Support.",
-    "level": -1
+    "level": 13
   },
   {
     "short": "other",
@@ -165,7 +165,7 @@
   {
     "short": "Bot",
     "name": "Permanent Ban - Other",
-    "level": -1,
+    "level": 13,
     "ordinal": 100
   }
 ]
