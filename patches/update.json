@@ -1,0 +1,170 @@
+[
+    {
+        "short": "chat_bot",
+        "name": "Chat Bot",
+        "message": "Using chat bots in the lobby is not permitted.",
+        "level": 2
+    },
+    {
+        "short": "Bad_Behavior",
+        "name": "Encouraging Bad Behavior",
+        "message": "Encouraging others to break the rules is not allowed.",
+        "level": 5
+    },
+    {
+        "short": "Server_Ad",
+        "name": "Server Advertisement",
+        "message": "Please use the /ad command when advertising a Minehut server.",
+        "level": 5
+    },
+    {
+        "short": "External",
+        "name": "External Advertisement",
+        "message": "Advertising external servers is not permitted in our lobby.",
+        "level": 6
+    },
+    {
+        "short": "Spam",
+        "name": "Spam",
+        "message": "Spamming the lobby violates our rules.",
+        "level": 6
+    },
+    {
+        "short": "Swearing",
+        "name": "Swearing",
+        "message": "Swearing is against our rules, so is trying to bypass our chat filter.",
+        "level": 6
+    },
+    {
+        "short": "auto_ad",
+        "name": "Auto Ad",
+        "message": "Using tools to automatically advertise is not allowed.",
+        "level": 7
+    },
+    {
+        "short": "Harassment",
+        "name": "Harassment",
+        "message": "Harassing other players and staff is not permitted.",
+        "level": 7,
+        "scale": "BAN"
+    },
+    {
+        "short": "Inappropriate",
+        "name": "Inappropriate Behavior",
+        "message": "Inappropriate topics/words are not permitted in chat.",
+        "level": 7,
+        "scale": "BAN"
+    },
+    {
+        "short": "staff_imper",
+        "name": "Staff Impersonation",
+        "message": "Pretending to be Minehut or SLG staff is not allowed.",
+        "level": 9,
+        "scale": "BAN"
+    },
+    {
+        "short": "Discrimination",
+        "name": "Discrimination",
+        "message": "Using slurs and/or discriminating others is not allowed.",
+        "level": 9,
+        "scale": "BAN"
+    },
+    {
+        "short": "abuse_supp",
+        "name": "Abusing Support",
+        "message": "Abusing Support or staff is not allowed.",
+        "level": 9,
+        "scale": "BAN"
+    },
+    {
+        "short": "Links",
+        "name": "Sending Malicious Links",
+        "message": "Sharing malicious links that might install malware or collect personal information are not allowed.",
+        "level": 10,
+        "scale": "BAN"
+    },
+    {
+        "short": "Encouraging_Harm",
+        "name": "Death Wishes/Self Harm Encouragement",
+        "message": "Death wishes or encouraging self harm to others is not permitted.",
+        "level": 10,
+        "scale": "BAN"
+    },
+    {
+        "short": "backdoor",
+        "name": "Hacking/Backdoor Player Server",
+        "message": "Using a tool or command block to hack a player server is not allowed.",
+        "level": 10,
+        "scale": "BAN"
+    },
+    {
+        "short": "other",
+        "name": "Other 3mo",
+        "message": "Your account has been banned, please contact Support for more info.",
+        "level": 10,
+        "scale": "BAN"
+    },
+    {
+        "short": "Disruption",
+        "name": "Community Disruption",
+        "message": "Griefing player servers or causing disruptions in the community is not permitted.",
+        "level": 11,
+        "scale": "BAN"
+    },
+    {
+        "short": "Personal_Info",
+        "name": "Releasing Personal Info",
+        "message": "Distributing any personal information, even if fake, is not permitted.",
+        "level": 13,
+        "scale": "BAN"
+    },
+    {
+        "short": "Threats",
+        "name": "DDoS, Dox or Death Threats",
+        "message": "Making any threats against Minehut, staff, or other players is not permitted.",
+        "level": 13,
+        "scale": "BAN"
+    },
+    {
+        "short": "Predatory",
+        "name": "Predatory Behavior/Explicit Content	Predatory",
+        "message": "Predatory behvior or sexual harassment of any kind is strictly prohibited.",
+        "level": 13,
+        "scale": "BAN"
+    },
+    {
+        "short": "Ban_Evasion",
+        "name": "Ban Evasion",
+        "message": "Using other accounts to evade punishments is not allowed",
+        "level": 13,
+        "scale": "BAN"
+    },
+    {
+        "short": "Fraud",
+        "name": "Chargeback/Fraud Charges",
+        "message": "Please contact customer support for more info: minehut.com/support",
+        "level": 13,
+        "scale": "BAN"
+    },
+    {
+        "short": "nameban",
+        "name": "Inappropriate Name/Skin",
+        "message": "Inappropriate usernames and skins are not permitted on our servers. Please change it and contact Support.",
+        "level": 13,
+        "scale": "BAN"
+    },
+    {
+        "short": "perm",
+        "name": "Other Perm",
+        "message": "Your account has been banned, please contact Support for more info.",
+        "level": 13,
+        "scale": "BAN"
+    },
+    {
+        "short": "under13",
+        "name": "Under 13",
+        "message": "Players using Minehut must be at least 13 years old.",
+        "level": 13,
+        "scale": "BAN"
+    }
+]
